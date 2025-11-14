@@ -1,0 +1,63 @@
+{
+  "python_version": "3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]",
+  "os_info": {
+    "system": "Windows",
+    "release": "11",
+    "version": "10.0.26100",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel"
+  },
+  "cpu_info": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+  "cuda_version": "CUDA not found or nvcc not in PATH",
+  "pytorch_info": {
+    "pytorch_version": "2.6.0+cu126",
+    "torchvision_version": "0.21.0+cu126",
+    "cuda_available": true,
+    "cuda_version_pytorch": "12.6",
+    "cudnn_version": 90501,
+    "cudnn_enabled": true
+  },
+  "gpu_info": [
+    {
+      "name": "NVIDIA GeForce RTX 4080 Laptop GPU",
+      "memory": "12282 MiB",
+      "compute_capability": "8.9",
+      "driver_version": "581.15"
+    }
+  ],
+  "gpu_specs": {
+    "RTX_4080_Laptop": {
+      "cuda_cores": "7424",
+      "tensor_cores": "232 (4th gen)",
+      "memory": "12 GB GDDR6",
+      "memory_bandwidth": "432 GB/s",
+      "base_clock": "~1350 MHz",
+      "boost_clock": "~2280 MHz",
+      "peak_fp32_tflops": "~22.6 TFLOPs",
+      "peak_fp16_tflops": "~45.2 TFLOPs (with Tensor Cores)",
+      "tdp": "~150W",
+      "architecture": "Ada Lovelace (NVIDIA Ampere successor)"
+    },
+    "T4": {
+      "cuda_cores": "2560",
+      "tensor_cores": "320 (Turing)",
+      "memory": "16 GB GDDR6",
+      "memory_bandwidth": "320 GB/s",
+      "base_clock": "585 MHz",
+      "boost_clock": "1590 MHz",
+      "peak_fp32_tflops": "8.1 TFLOPs",
+      "peak_fp16_tflops": "65 TFLOPs (with Tensor Cores)",
+      "tdp": "70W",
+      "architecture": "Turing"
+    }
+  },
+  "installed_packages": {
+    "numpy": "2.2.4",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.1",
+    "seaborn": "0.13.2",
+    "fvcore": "0.1.5.post20221221",
+    "thop": "0.1.1"
+  },
+  "timestamp": "2025-11-14T17:16:16.778624"
+}
