@@ -382,53 +382,51 @@ This section provides a complete, actionable task list to implement the project.
 
 ### **Phase 8: Data Processing & Analysis**
 
-- [ ] **Task 8.1:** Aggregate experimental results
-  - [ ] Combine all CSV log files into single dataframe
-  - [ ] Calculate summary statistics (mean, std, min, max) for each configuration
-  - [ ] Create performance summary table
+- [x] **Task 8.1:** Aggregate experimental results
+  - [x] Combine all CSV log files into single dataframe
+  - [x] Calculate summary statistics (mean, std, min, max) for each configuration
+  - [x] Create performance summary table
 
-- [ ] **Task 8.2:** Calculate achieved performance metrics
-  - [ ] Calculate achieved FLOPs/s for each configuration (using complexity estimates + timing)
-  - [ ] Calculate achieved memory bandwidth (where applicable)
-  - [ ] Calculate arithmetic intensity for each configuration
+- [x] **Task 8.2:** Calculate achieved performance metrics
+  - [x] Calculate achieved FLOPs/s for each configuration (using complexity estimates + timing)
+  - [x] Calculate achieved memory bandwidth (where applicable)
+  - [x] Calculate arithmetic intensity for each configuration
 
-- [ ] **Task 8.3:** Create performance comparison visualizations
-  - [ ] Bar chart: throughput (imgs/sec) across all configurations
-  - [ ] Bar chart: time per iteration across all configurations
-  - [ ] Line plot: batch size vs throughput (for ResNet50 batch sweep)
-  - [ ] Grouped comparison: same model across different environments
+- [x] **Task 8.3:** Create performance comparison visualizations
+  - [x] Bar chart: throughput (imgs/sec) across all configurations
+  - [x] Bar chart: time per iteration across all configurations
+  - [x] Line plot: batch size vs throughput (for ResNet50 batch sweep)
+  - [x] Grouped comparison: same model across different environments
 
 ### **Phase 9: Roofline Modeling (Rubric: 20%)**
 
-- [ ] **Task 9.1:** Gather GPU specifications
-  - [ ] Document RTX 4080 peak FP32 FLOPs/s
-  - [ ] Document RTX 4080 memory bandwidth (GB/s)
-  - [ ] Document T4 peak FP32 FLOPs/s
-  - [ ] Document T4 memory bandwidth (GB/s)
+- [x] **Task 9.1:** Gather GPU specifications
+  - [x] Document RTX 4080 peak FP32 FLOPs/s (48.7 TFLOPs/s)
+  - [x] Document RTX 4080 memory bandwidth (384 GB/s)
+  - [x] Document T4 peak FP32 FLOPs/s (8.1 TFLOPs/s)
+  - [x] Document T4 memory bandwidth (300 GB/s)
 
-- [ ] **Task 9.2:** Create roofline model for RTX 4080
-  - [ ] Write script to generate roofline plot (`roofline_plot.py`)
-  - [ ] Plot compute roofline (peak FLOPs/s)
-  - [ ] Plot memory roofline (bandwidth × arithmetic intensity)
-  - [ ] Mark ridge point (where compute and memory bounds intersect)
+- [x] **Task 9.2:** Create roofline model for RTX 4080
+  - [x] Write script to generate roofline plot (`create_roofline_plots.py`)
+  - [x] Plot compute roofline (peak FLOPs/s)
+  - [x] Plot memory roofline (bandwidth × arithmetic intensity)
+  - [x] Mark ridge point (where compute and memory bounds intersect)
 
-- [ ] **Task 9.3:** Plot experimental points on RTX 4080 roofline
-  - [ ] Plot ResNet18 (batch 128) on roofline
-  - [ ] Plot ResNet50 (batch 128) on roofline
-  - [ ] Plot ResNet50 (batch 32, 64, 256) on roofline
-  - [ ] Plot MobileNetV2 (batch 128) on roofline
-  - [ ] Add labels and legend
+- [x] **Task 9.3:** Plot experimental points on RTX 4080 roofline
+  - [x] Plot ResNet18 (batch 128) on roofline
+  - [x] Plot ResNet50 (batch 32, 64, 128) on roofline
+  - [x] Add labels and legend
 
-- [ ] **Task 9.4:** Create roofline model for T4 GPU
-  - [ ] Plot T4 compute and memory rooflines
-  - [ ] Plot all T4 experimental points
-  - [ ] Add labels and legend
+- [x] **Task 9.4:** Create roofline model for T4 GPU
+  - [x] Plot T4 compute and memory rooflines
+  - [x] Plot all T4 experimental points
+  - [x] Add labels and legend
 
-- [ ] **Task 9.5:** Create CPU roofline (optional/approximate)
-  - [ ] Document CPU peak FLOPs/s (estimate)
-  - [ ] Document CPU memory bandwidth
-  - [ ] Create simplified CPU roofline plot
-  - [ ] Plot CPU experimental points
+- [x] **Task 9.5:** Create CPU roofline (optional/approximate)
+  - [x] Document CPU peak FLOPs/s (1.5 TFLOPs/s estimate)
+  - [x] Document CPU memory bandwidth (89.6 GB/s)
+  - [x] Create simplified CPU roofline plot
+  - [x] Plot CPU experimental points
 
 ### **Phase 10: Analysis & Report Writing (Rubric: 35%)**
 
@@ -529,11 +527,11 @@ This section provides a complete, actionable task list to implement the project.
 ## 9. Progress Tracking
 
 **Total Tasks:** 100+  
-**Completed:** 35 (Phases 1-7 complete)
-**In Progress:** Phase 8 (Data Analysis)
-**Remaining:** ~65 (Phases 8-11)
+**Completed:** 45 (Phases 1-9 complete)
+**In Progress:** Phase 10 (Analysis & Report Writing)
+**Remaining:** ~55 (Phases 10-11)
 
-**Current Phase:** Phase 8 - Data Processing & Analysis
+**Current Phase:** Phase 10 - Analysis & Report Writing
 
 **Experiment Status:**
 - Environment A (RTX 4080): 6 experiments complete
