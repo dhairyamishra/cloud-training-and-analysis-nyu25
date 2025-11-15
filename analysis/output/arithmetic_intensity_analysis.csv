@@ -1,0 +1,10 @@
+environment,model,batch_size,arithmetic_intensity,throughput_imgs_per_sec
+CPU,resnet18,64,226.35,10.33
+RTX 4080,resnet18,128,229.83,1106.97
+RTX 4080,resnet50,32,227.12,358.78
+RTX 4080,resnet50,64,234.0,366.47
+RTX 4080,resnet50,128,237.6,30.83
+T4 GPU,resnet18,128,229.83,649.66
+T4 GPU,resnet50,32,227.12,111.08
+T4 GPU,resnet50,64,234.0,117.37
+T4 GPU,resnet50,128,237.6,119.8

@@ -1,0 +1,10 @@
+environment,model,batch_size,arithmetic_intensity,ridge_point,bound_type,achieved_tflops,peak_tflops,efficiency_percent
+CPU,resnet18,64,226.35,16.74,Compute-bound,0.056,1.5,3.75
+RTX 4080,resnet18,128,229.83,126.82,Compute-bound,5.548,48.7,11.39
+RTX 4080,resnet50,32,227.12,126.82,Compute-bound,4.142,48.7,8.5
+RTX 4080,resnet50,64,234.0,126.82,Compute-bound,4.187,48.7,8.6
+RTX 4080,resnet50,128,237.6,126.82,Compute-bound,0.296,48.7,0.61
+T4 GPU,resnet18,128,229.83,27.0,Compute-bound,2.932,8.1,36.2
+T4 GPU,resnet50,32,227.12,27.0,Compute-bound,1.257,8.1,15.52
+T4 GPU,resnet50,64,234.0,27.0,Compute-bound,1.305,8.1,16.11
+T4 GPU,resnet50,128,237.6,27.0,Compute-bound,1.306,8.1,16.13
