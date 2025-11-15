@@ -26,9 +26,9 @@ data/*.tar.gz
 data/*.zip
 
 # ============================================================================
-# RESULTS & LOGS - Can be regenerated
+# RESULTS & LOGS - Allow CSVs, block large files
 # ============================================================================
-results/**/*.csv
+# Allow CSV results (they're small and important for analysis)
 results/**/*.log
 results/**/*.json
 *.log

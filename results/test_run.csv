@@ -1,0 +1,6 @@
+env,device,model,batch_size,iter_idx,iter_time_ms,imgs_per_sec,timestamp
+envA,cuda,resnet18,32,0,36.60,874.29,1763154964.404983
+envA,cuda,resnet18,32,1,14.24,2247.30,1763154964.4402676
+envA,cuda,resnet18,32,2,34.29,933.33,1763154964.4748924
+envA,cuda,resnet18,32,3,34.43,929.50,1763154964.5095682
+envA,cuda,resnet18,32,4,35.28,906.99,1763154964.5451894

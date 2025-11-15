@@ -1,0 +1,7 @@
+model,batch_size,RTX4080_vs_T4
+mobilenet_v2,128,2.44
+resnet18,64,
+resnet18,128,1.7
+resnet50,32,3.23
+resnet50,64,3.12
+resnet50,128,0.26

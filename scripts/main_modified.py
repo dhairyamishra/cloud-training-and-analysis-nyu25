@@ -199,23 +199,27 @@ def main_worker(gpu, ngpus_per_node, args):
                 # DistributedDataParallel will divide and allocate batch_size to all
                 # available GPUs if device_ids are not set
                 model = torch.nn.parallel.DistributedDataParallel(model)
-    elif args.gpu is not None and torch.cuda.is_available():
+    elif not args.no_accel and args.gpu is not None and torch.cuda.is_available():
         torch.cuda.set_device(args.gpu)
         model = model.cuda(args.gpu)
-    else:
+    elif not args.no_accel and torch.cuda.is_available():
         # DataParallel will divide and allocate batch_size to all available GPUs
         if args.arch.startswith('alexnet') or args.arch.startswith('vgg'):
             model.features = torch.nn.DataParallel(model.features)
             model.cuda()
         else:
             model = torch.nn.DataParallel(model).cuda()
+    else:
+        # CPU mode or no accelerator available
+        print('using CPU, this will be slow')
+        model = model.cpu()
 
-    if torch.cuda.is_available():
+    if not args.no_accel and torch.cuda.is_available():
         if args.gpu:
             device = torch.device('cuda:{}'.format(args.gpu))
         else:
             device = torch.device("cuda")
-    elif torch.backends.mps.is_available():
+    elif not args.no_accel and torch.backends.mps.is_available():
         device = torch.device("mps")
     else:
         device = torch.device("cpu")
@@ -431,6 +435,10 @@ def validate(val_loader, model, criterion, args):
                     else:
                         images = images.to(device)
                         target = target.to(device)
+                else:
+                    # CPU mode: explicitly move to CPU
+                    images = images.to(device)
+                    target = target.to(device)
 
                 # compute output
                 output = model(images)

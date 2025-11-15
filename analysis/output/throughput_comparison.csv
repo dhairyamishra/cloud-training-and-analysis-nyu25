@@ -1,0 +1,7 @@
+model,batch_size,CPU,RTX 4080,T4 GPU
+mobilenet_v2,128,,751.93,308.14
+resnet18,64,10.33,,
+resnet18,128,,1106.97,649.66
+resnet50,32,,358.78,111.08
+resnet50,64,,366.47,117.37
+resnet50,128,,30.83,119.8

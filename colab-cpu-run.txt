@@ -1,0 +1,130 @@
+================================================================================
+CHECKING GPU AVAILABILITY
+================================================================================
+PyTorch version: 2.8.0+cu126
+CUDA available: False
+WARNING: No GPU detected! Enable GPU in Runtime > Change runtime type
+
+================================================================================
+INSTALLING DEPENDENCIES
+================================================================================
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.2/50.2 kB 1.8 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.2/42.2 kB 2.5 MB/s eta 0:00:00
+  Preparing metadata (setup.py) ... done
+  Building wheel for fvcore (setup.py) ... done
+  Building wheel for iopath (setup.py) ... done
+================================================================================
+CLONING REPOSITORY
+================================================================================
+Cloning into 'cloud-training-and-analysis-nyu25'...
+remote: Enumerating objects: 27, done.
+remote: Counting objects: 100% (27/27), done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 27 (delta 4), reused 27 (delta 4), pack-reused 0 (from 0)
+Receiving objects: 100% (27/27), 28.94 KiB | 2.63 MiB/s, done.
+Resolving deltas: 100% (4/4), done.
+/content/cloud-training-and-analysis-nyu25
+
+================================================================================
+DOWNLOADING IMAGENETTE DATASET
+================================================================================
+================================================================================
+IMAGENETTE DATASET DOWNLOAD
+================================================================================
+
+Downloading ImageNette from: https://s3.amazonaws.com/fast-ai-imageclas/imagenette2-320.tgz
+Destination: /content/cloud-training-and-analysis-nyu25/data/imagenette2-320.tgz
+
+imagenette2-320.tgz: 342MB [00:06, 49.8MB/s]               
+
+✓ Download complete: /content/cloud-training-and-analysis-nyu25/data/imagenette2-320.tgz
+  Size: 0.32 GB
+
+Extracting archive...
+/content/cloud-training-and-analysis-nyu25/download_imagenette.py:68: DeprecationWarning: Python 3.14 will, by default, filter extracted tar archives and reject files or modify their metadata. Use the filter argument to control this behavior.
+  tar.extractall(data_dir)
+✓ Extraction complete: /content/cloud-training-and-analysis-nyu25/data/imagenette2-320
+✓ Cleaned up archive file
+
+================================================================================
+DATASET VERIFICATION
+================================================================================
+
+✓ Training directory: /content/cloud-training-and-analysis-nyu25/data/imagenette2-320/train
+  Classes: 10
+  Sample class 'n03394916': 956 images
+
+✓ Validation directory: /content/cloud-training-and-analysis-nyu25/data/imagenette2-320/val
+  Classes: 10
+  Sample class 'n03394916': 394 images
+
+================================================================================
+IMAGENETTE CLASSES
+================================================================================
+
+ImageNette contains 10 classes:
+  n01440764: tench (fish)
+  n02102040: English springer (dog)
+  n02979186: cassette player
+  n03000684: chain saw
+  n03028079: church
+  n03394916: French horn
+  n03417042: garbage truck
+  n03425413: gas pump
+  n03445777: golf ball
+  n03888257: parachute
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+✓ Dataset ready at: /content/cloud-training-and-analysis-nyu25/data/imagenette2-320
+
+You can now:
+1. Use this dataset directly for experiments (it's already small enough)
+2. Or create an even smaller subset if needed
+================================================================================
+
+✓ SUCCESS: ImageNette dataset is ready!
+   Path: /content/cloud-training-and-analysis-nyu25/data/imagenette2-320
+================================================================================
+EXPERIMENT 1: ResNet18, Batch 128
+================================================================================
+/content/cloud-training-and-analysis-nyu25/scripts/main_modified.py:114: UserWarning: You have chosen a specific GPU. This will completely disable data parallelism.
+  warnings.warn('You have chosen a specific GPU. This will completely '
+Logging to: results/envC_T4/resnet18_b128.csv
+=> creating model 'resnet18'
+using CPU, this will be slow
+/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py:627: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+Epoch: [0][ 1/74]	Time 44.513 (44.513)	Data  2.187 ( 2.187)	Loss 7.0229e+00 (7.0229e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Epoch: [0][11/74]	Time 37.816 (39.364)	Data  0.022 ( 0.218)	Loss 4.9763e+00 (6.3548e+00)	Acc@1  10.16 ( 12.57)	Acc@5  51.56 ( 46.66)
+Epoch: [0][21/74]	Time 38.121 (39.216)	Data  0.030 ( 0.125)	Loss 5.7977e+00 (5.6180e+00)	Acc@1   5.47 ( 12.43)	Acc@5  50.00 ( 47.32)
+Epoch: [0][31/74]	Time 38.740 (39.419)	Data  0.026 ( 0.094)	Loss 2.4017e+00 (4.8733e+00)	Acc@1  12.50 ( 12.17)	Acc@5  60.16 ( 49.02)
+Epoch: [0][41/74]	Time 38.347 (39.074)	Data  0.024 ( 0.077)	Loss 2.9506e+00 (4.3489e+00)	Acc@1  17.19 ( 12.60)	Acc@5  52.34 ( 50.78)
+Epoch: [0][51/74]	Time 39.109 (39.294)	Data  0.036 ( 0.067)	Loss 2.7613e+00 (4.0229e+00)	Acc@1  20.31 ( 13.51)	Acc@5  60.16 ( 52.86)
+Epoch: [0][61/74]	Time 40.216 (39.466)	Data  0.024 ( 0.060)	Loss 2.2182e+00 (3.7362e+00)	Acc@1  21.09 ( 14.23)	Acc@5  60.16 ( 54.14)
+Epoch: [0][71/74]	Time 38.342 (39.363)	Data  0.024 ( 0.055)	Loss 2.1330e+00 (3.5278e+00)	Acc@1  24.22 ( 15.29)	Acc@5  65.62 ( 55.45)
+Test: [ 1/31]	Time 22.716 (22.716)	Loss 1.8091e+00 (1.8091e+00)	Acc@1  63.28 ( 63.28)	Acc@5  89.06 ( 89.06)
+Test: [11/31]	Time 11.902 (13.244)	Loss 2.6918e+00 (2.1538e+00)	Acc@1   0.00 ( 25.57)	Acc@5   0.00 ( 69.60)
+Test: [21/31]	Time 11.934 (12.602)	Loss 2.2576e+00 (2.2285e+00)	Acc@1   6.25 ( 20.39)	Acc@5  46.09 ( 66.00)
+Test: [31/31]	Time  8.106 (12.162)	Loss 1.6125e+00 (2.2069e+00)	Acc@1  63.53 ( 21.22)	Acc@5  71.76 ( 67.69)
+ *   Acc@1 21.223 Acc@5 67.694
+================================================================================
+EXPERIMENT 2: ResNet50, Batch 32
+================================================================================
+/content/cloud-training-and-analysis-nyu25/scripts/main_modified.py:114: UserWarning: You have chosen a specific GPU. This will completely disable data parallelism.
+  warnings.warn('You have chosen a specific GPU. This will completely '
+Logging to: results/envC_T4/resnet50_b32.csv
+=> creating model 'resnet50'
+using CPU, this will be slow
+/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py:627: UserWarning: This DataLoader will create 4 worker processes in total. Our suggested max number of worker in current system is 2, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/torch/utils/data/dataloader.py:666: UserWarning: 'pin_memory' argument is set as true but no accelerator is found, then device pinned memory won't be used.
+  warnings.warn(warn_msg)
+Epoch: [0][  1/296]	Time 29.208 (29.208)	Data  0.716 ( 0.716)	Loss 6.8042e+00 (6.8042e+00)	Acc@1   0.00 (  0.00)	Acc@5   0.00 (  0.00)
+Epoch: [0][ 11/296]	Time 24.033 (22.685)	Data  0.011 ( 0.073)	Loss 1.3748e+01 (2.1507e+01)	Acc@1   9.38 (  8.81)	Acc@5  56.25 ( 47.16)
+Epoch: [0][ 21/296]	Time 21.350 (21.978)	Data  0.007 ( 0.042)	Loss 5.4396e+00 (1.4371e+01)	Acc@1   6.25 (  7.89)	Acc@5  56.25 ( 47.32)
